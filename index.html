@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Legendas TikTok Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="nav">
+        <div class="container">
+            <h2>LegendaPro</h2>
+            <a href="#pricing" class="cta-button">Comprar Agora</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Crie Legendas Virais para TikTok em Segundos</h1>
+                <p class="subtitle">Aumente seu engajamento com legendas profissionais que convertem</p>
+                <div class="hero-buttons">
+                    <a href="#pricing" class="primary-button">Começar por R$19,99</a>
+                    <a href="#demo" class="secondary-button">Ver demonstração</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="icon">⚡</div>
+                        <h3>Rápido e Fácil</h3>
+                        <p>Gere legendas em menos de 30 segundos</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">🎯</div>
+                        <h3>Otimizado para Viral</h3>
+                        <p>Algoritmo baseado em vídeos de sucesso</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">🔥</div>
+                        <h3>Trending Topics</h3>
+                        <p>Hashtags populares atualizadas diariamente</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="demo" class="demo">
+            <div class="container">
+                <h2>Veja como é fácil</h2>
+                <div class="demo-container">
+                    <div class="demo-video">
+                        <img src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=800&auto=format&fit=crop&q=80" alt="Demo do gerador" class="preview-image">
+                        <button class="play-button" id="playDemo">▶</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="pricing">
+            <div class="container">
+                <div class="price-card">
+                    <h2>Oferta Especial</h2>
+                    <div class="price">
+                        <span class="currency">R$</span>
+                        <span class="amount">19</span>
+                        <span class="cents">,99</span>
+                    </div>
+                    <ul class="benefits">
+                        <li>✓ Acesso vitalício</li>
+                        <li>✓ Atualizações gratuitas</li>
+                        <li>✓ Suporte prioritário</li>
+                        <li>✓ +1000 modelos prontos</li>
+                    </ul>
+                    <button id="buyButton" class="buy-button">Comprar Agora</button>
+                    <p class="guarantee">7 dias de garantia ou seu dinheiro de volta</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 LegendaPro. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Finalizar Compra</h2>
+            <form id="paymentForm">
+                <button type="submit" class="buy-button">Pagar R$19,99</button>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById("paymentForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Evita o envio padrão do formulário
+            window.location.href = "https://mpago.la/1rbz9Xx"; // Redireciona para o link
+        });
+    </script>    
+
+    <script src="script.js"></script>
+</body>
+</html>

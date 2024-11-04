@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Legenda</title>
+    <link rel="stylesheet" href="style1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador de Legenda</h1>
+        
+        <button id="buyLicense" onclick="comprarLicenca()">
+            Comprar Licença Premium
+        </button>
+        
+        <div class="card">
+            <input type="text" id="senha" placeholder="Digite sua senha de acesso..." />
+            <textarea id="inputText" placeholder="Digite seu texto aqui para gerar a legenda..."></textarea>
+            
+            <div class="duration-control">
+                <label for="duration">Duração de cada legenda (segundos):</label>
+                <input type="number" id="duration" value="4" min="1" step="1">
+            </div>
+            
+            <div class="button-group">
+                <button id="generateSRT">Gerar Legenda</button>
+                <button id="downloadSRT">Baixar Legenda</button>
+            </div>
+            
+            <textarea id="outputSRT" placeholder="Sua legenda aparecerá aqui..." readonly></textarea>
+        </div>
+
+        <section id="howToUse">
+            <div class="usageStep">
+                <img src="/images/Senha.png" alt="Digite a Senha" class="usageImage" onclick="showModal(this.src)">
+                <h3>Passo 1</h3>
+                <p>Digite a senha disponibilizada por e-mail ou WhatsApp</p>
+            </div>
+            <div class="usageStep">
+                <img src="/images/Texto.png" alt="Digite o Texto" class="usageImage" onclick="showModal(this.src)">
+                <h3>Passo 2</h3>
+                <p>Informe o texto e gere a legenda</p>
+            </div>
+            <div class="usageStep">
+                <img src="/images/Baixar.png" alt="Baixe a Legenda" class="usageImage" onclick="showModal(this.src)">
+                <h3>Passo 3</h3>
+                <p>Baixe o arquivo da legenda e vá até o CapCut</p>
+            </div>
+            <div class="usageStep">
+                <img src="/images/importarCapCut.png" alt="Importe no CapCut" class="usageImage" onclick="showModal(this.src)">
+                <h3>Passo 4</h3>
+                <p>Importe o arquivo no CapCut na tela "Áudio e Imagens"</p>
+            </div>
+        </section>
+        
+        <footer class="image-footer">
+            © 2024 Igor Mendes. Todos os direitos reservados.
+        </footer>
+    </div>
+
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script src="senha.js"></script>
+    <script src="script1.js"></script>
+    <script>
+        function comprarLicenca() {
+            window.location.href = "https://mpago.la/1rbz9Xx";
+        }
+
+        function showModal(imgSrc) {
+            const modal = document.getElementById("imageModal");
+            const modalImage = document.getElementById("modalImage");
+            modal.style.display = "flex";
+            modalImage.src = imgSrc;
+        }
+
+        function closeModal() {
+            document.getElementById("imageModal").style.display = "none";
+        }
+
+        // Fecha o modal ao clicar fora da imagem
+        window.onclick = function(event) {
+            const modal = document.getElementById("imageModal");
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
